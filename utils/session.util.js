@@ -1,0 +1,1 @@
+exports.getReqUser = (req) => req.user;

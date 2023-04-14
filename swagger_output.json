@@ -1,0 +1,927 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API Pagos",
+    "version": "1.0.0",
+    "description": ""
+  },
+  "host": "pay.deliver.ar:4000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/users/login": {
+      "post": {
+        "tags": [
+          "Usuarios"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Datos login.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "docTypeId": {
+                  "type": "string",
+                  "example": "DNI"
+                },
+                "docNumber": {
+                  "type": "string",
+                  "example": "1"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "1"
+                }
+              },
+              "required": [
+                "docTypeId",
+                "docNumber",
+                "password"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Login OK.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number",
+                      "example": 1
+                    },
+                    "docTypeId": {
+                      "type": "string",
+                      "example": "DNI"
+                    },
+                    "docNumber": {
+                      "type": "string",
+                      "example": "1"
+                    },
+                    "name": {
+                      "type": "string",
+                      "example": "Apellido 1"
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "400": {
+            "description": "Error de negocio.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusCode": {
+                  "type": "number",
+                  "example": 400
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Error de negocio."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "500": {
+            "description": "Error interno.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusCode": {
+                  "type": "number",
+                  "example": 500
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Error interno del servidor."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/logout": {
+      "post": {
+        "tags": [
+          "Usuarios"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "204": {
+            "description": "Logout OK."
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Error interno.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusCode": {
+                  "type": "number",
+                  "example": 500
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Error interno del servidor."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/contacts/": {
+      "get": {
+        "tags": [
+          "Contactos"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Contactos.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number",
+                    "example": 2
+                  },
+                  "accountId": {
+                    "type": "number",
+                    "example": 1
+                  },
+                  "observation": {
+                    "type": "string",
+                    "example": "Comentario"
+                  },
+                  "account": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number",
+                        "example": 1
+                      },
+                      "alias": {
+                        "type": "string",
+                        "example": "alias1"
+                      },
+                      "cbu": {
+                        "type": "string",
+                        "example": "1111111111111111111111"
+                      },
+                      "user": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number",
+                            "example": 1
+                          },
+                          "docTypeId": {
+                            "type": "string",
+                            "example": "DNI"
+                          },
+                          "docNumber": {
+                            "type": "string",
+                            "example": "1"
+                          },
+                          "name": {
+                            "type": "string",
+                            "example": "Usuario 1"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Error interno.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusCode": {
+                  "type": "number",
+                  "example": 500
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Error interno del servidor."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Contactos"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Contacto a agregar.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "accountId": {
+                  "type": "number",
+                  "example": 2
+                },
+                "observation": {
+                  "type": "string",
+                  "example": "Comentario opcional"
+                }
+              },
+              "required": [
+                "accountId"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Contacto agregado.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "example": 1
+                },
+                "userId": {
+                  "type": "number",
+                  "example": 1
+                },
+                "accountId": {
+                  "type": "number",
+                  "example": 2
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "400": {
+            "description": "Error de negocio.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusCode": {
+                  "type": "number",
+                  "example": 400
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Error de negocio."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Error interno.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusCode": {
+                  "type": "number",
+                  "example": 500
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Error interno del servidor."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/accounts/": {
+      "get": {
+        "tags": [
+          "Cuentas"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Datos de la cuenta del usuario logueado.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "last30Balance": {
+                  "type": "object",
+                  "properties": {
+                    "debit": {
+                      "type": "number",
+                      "example": 600.5
+                    },
+                    "credit": {
+                      "type": "number",
+                      "example": 200
+                    }
+                  }
+                },
+                "account": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number",
+                      "example": 1
+                    },
+                    "userId": {
+                      "type": "number",
+                      "example": 1
+                    },
+                    "balance": {
+                      "type": "number",
+                      "example": 396.5
+                    },
+                    "alias": {
+                      "type": "string",
+                      "example": "alias1"
+                    },
+                    "cbu": {
+                      "type": "string",
+                      "example": "1111111111111111111111"
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Error interno.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusCode": {
+                  "type": "number",
+                  "example": 500
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Error interno del servidor."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/accounts/find": {
+      "get": {
+        "tags": [
+          "Cuentas"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "alias",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "cbu",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Cuenta encontrada.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number",
+                    "example": 2
+                  },
+                  "alias": {
+                    "type": "string",
+                    "example": "alias2"
+                  },
+                  "cbu": {
+                    "type": "string",
+                    "example": "2222222222222222222222"
+                  },
+                  "user": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number",
+                        "example": 11
+                      },
+                      "docTypeId": {
+                        "type": "string",
+                        "example": "DNI"
+                      },
+                      "docNumber": {
+                        "type": "string",
+                        "example": "2"
+                      },
+                      "name": {
+                        "type": "string",
+                        "example": "Usuario 2"
+                      }
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "400": {
+            "description": "Error de negocio.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusCode": {
+                  "type": "number",
+                  "example": 400
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Error de negocio."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Error interno.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusCode": {
+                  "type": "number",
+                  "example": 500
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Error interno del servidor."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/accounts/recharge": {
+      "patch": {
+        "tags": [
+          "Cuentas"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Recarga.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "type": "number",
+                  "example": 100
+                }
+              },
+              "required": [
+                "amount"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Recarga realizada.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "movement": {
+                  "type": "object",
+                  "properties": {
+                    "creationDate": {
+                      "type": "string",
+                      "example": "2022-10-23T00:31:50.624Z"
+                    },
+                    "id": {
+                      "type": "number",
+                      "example": 72
+                    },
+                    "accountId": {
+                      "type": "number",
+                      "example": 1
+                    },
+                    "amount": {
+                      "type": "number",
+                      "example": 100
+                    },
+                    "movementTypeId": {
+                      "type": "string",
+                      "example": "RECHARGE"
+                    },
+                    "description": {
+                      "type": "string",
+                      "example": "Recarga de saldo"
+                    },
+                    "usernameCredit": {
+                      "type": "string",
+                      "example": "Usuario 1"
+                    }
+                  }
+                },
+                "account": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number",
+                      "example": 1
+                    },
+                    "userId": {
+                      "type": "number",
+                      "example": 1
+                    },
+                    "balance": {
+                      "type": "string",
+                      "example": "696.50"
+                    },
+                    "alias": {
+                      "type": "string",
+                      "example": "alias1"
+                    },
+                    "cbu": {
+                      "type": "string",
+                      "example": "1111111111111111111111"
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Error interno.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusCode": {
+                  "type": "number",
+                  "example": 500
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Error interno del servidor."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/movements/": {
+      "get": {
+        "tags": [
+          "Movimientos"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Historial de movimientos.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number",
+                    "example": 73
+                  },
+                  "accountId": {
+                    "type": "number",
+                    "example": 1
+                  },
+                  "amount": {
+                    "type": "number",
+                    "example": -500
+                  },
+                  "movementTypeId": {
+                    "type": "string",
+                    "example": "TRANSFER"
+                  },
+                  "billNumber": {
+                    "type": "number",
+                    "example": 123
+                  },
+                  "creationDate": {
+                    "type": "string",
+                    "example": "2022-10-23T01:04:04.000Z"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "Pago enviado"
+                  },
+                  "usernameDebit": {
+                    "type": "string",
+                    "example": "Usuario 1"
+                  },
+                  "usernameCredit": {
+                    "type": "string",
+                    "example": "Usuario 2"
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Error interno.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusCode": {
+                  "type": "number",
+                  "example": 500
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Error interno del servidor."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/transfers/": {
+      "post": {
+        "tags": [
+          "Transferencias"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Transferencia.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "creditUser": {
+                  "type": "object",
+                  "properties": {
+                    "docTypeId": {
+                      "type": "string",
+                      "example": "DNI"
+                    },
+                    "docNumber": {
+                      "type": "string",
+                      "example": "2"
+                    }
+                  }
+                },
+                "amount": {
+                  "type": "number",
+                  "example": 100
+                },
+                "billNumber": {
+                  "type": "number",
+                  "example": 123
+                },
+                "description": {
+                  "type": "string",
+                  "example": "Comentario opcional"
+                }
+              },
+              "required": [
+                "creditUser",
+                "amount",
+                "billNumber"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Transferencia realizada.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "creationDate": {
+                  "type": "string",
+                  "example": "2022-10-22T00:19:58.221Z"
+                },
+                "id": {
+                  "type": "number",
+                  "example": 1
+                },
+                "accountId": {
+                  "type": "number",
+                  "example": 1
+                },
+                "amount": {
+                  "type": "number",
+                  "example": -100
+                },
+                "movementTypeId": {
+                  "type": "string",
+                  "example": "TRANSFER"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "Pago enviado"
+                },
+                "billNumber": {
+                  "type": "number",
+                  "example": 123
+                },
+                "usernameDebit": {
+                  "type": "string",
+                  "example": "Usuario 1"
+                },
+                "usernameCredit": {
+                  "type": "string",
+                  "example": "Usuario 2"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "400": {
+            "description": "Error de negocio.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusCode": {
+                  "type": "number",
+                  "example": 400
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Error de negocio."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Error interno.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusCode": {
+                  "type": "number",
+                  "example": 500
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Error interno del servidor."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ]
+      }
+    }
+  }
+}
