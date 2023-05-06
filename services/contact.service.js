@@ -1,4 +1,5 @@
 const { models } = require("../db");
+const { Op } = require("sequelize");
 const BusinessError = require("../errors/business_error");
 
 exports.getList = async function (user) {
@@ -18,13 +19,23 @@ exports.getList = async function (user) {
 
 exports.add = async function (user, req) {
   try {
+    let account = await models.account.findOne({
+      where: {
+        [Op.or]: [
+          { alias: req?.alias },
+          { cbu: req?.cbu }
+        ]
+      }
+    });
     let contactDb = await models.contact.create({
-      userId: user.id,
-      ...req,
+      userId: user?.id,
+      accountId: account?.id,
+      observation: req?.notes
     });
 
     return contactDb;
   } catch (error) {
     if (error.parent?.code == "ER_DUP_ENTRY") throw new BusinessError("Contacto existente.", `accountId: ${req.accountId}.`);
+    throw error;
   }
 };

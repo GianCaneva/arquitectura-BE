@@ -1,0 +1,1604 @@
+[2023-05-05T00:02:48.569] [ERROR] default - 41195245 - connect ETIMEDOUT
+[2023-05-05T00:02:48.571] [ERROR] default - ConnectionError [SequelizeConnectionError]: connect ETIMEDOUT
+    at ConnectionManager.connect (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mysql\connection-manager.js:102:17)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async ConnectionManager._connect (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:220:24)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:174:32
+    at async ConnectionManager.getConnection (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\connection-manager.js:197:7)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:304:26
+    at async MySQLQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Function.findOne (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1228:12)
+    at async Object.exports.getUser (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:21:16) {
+  parent: Error: connect ETIMEDOUT
+      at Connection._handleTimeoutError (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\mysql2\lib\connection.js:189:17)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7) {
+    errorno: 'ETIMEDOUT',
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    fatal: true
+  },
+  original: Error: connect ETIMEDOUT
+      at Connection._handleTimeoutError (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\mysql2\lib\connection.js:189:17)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7) {
+    errorno: 'ETIMEDOUT',
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    fatal: true
+  }
+}
+[2023-05-05T00:18:38.299] [ERROR] default - 41195245 - Invalid object name 'users'.
+[2023-05-05T00:18:38.300] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Function.findOne (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1228:12)
+    at async Object.exports.getUser (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:21:16)
+    at async Object.exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:7:16)
+    at async exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:39:21) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'users'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'users'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+    parameters: undefined
+  },
+  sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+  parameters: {}
+}
+[2023-05-05T00:27:11.820] [ERROR] default - 41195245 - Invalid object name 'users'.
+[2023-05-05T00:27:11.821] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Function.findOne (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1228:12)
+    at async Object.exports.getUser (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:19:16)
+    at async Object.exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:7:16)
+    at async exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:39:21) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'users'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'users'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+    parameters: undefined
+  },
+  sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+  parameters: {}
+}
+[2023-05-05T00:28:02.153] [ERROR] default - 41195245 - Invalid object name 'users'.
+[2023-05-05T00:28:02.153] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Function.findOne (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1228:12)
+    at async Object.exports.getUser (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:20:16)
+    at async Object.exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:7:16)
+    at async exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:39:21) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'users'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'users'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+    parameters: undefined
+  },
+  sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+  parameters: {}
+}
+[2023-05-05T00:28:50.657] [ERROR] default - 41195245 - Invalid object name 'users'.
+[2023-05-05T00:28:50.658] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Function.findOne (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1228:12)
+    at async Object.exports.getUser (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:20:16)
+    at async Object.exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:7:16)
+    at async exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:39:21) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'users'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'users'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+    parameters: undefined
+  },
+  sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+  parameters: {}
+}
+[2023-05-05T00:33:45.436] [ERROR] default - 41195245 - Invalid object name 'accounts'.
+[2023-05-05T00:33:45.437] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Function.findOne (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1228:12)
+    at async Object.exports.getUser (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:20:16)
+    at async Object.exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:7:16)
+    at async exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:39:21) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'accounts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'accounts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+    parameters: undefined
+  },
+  sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+  parameters: {}
+}
+[2023-05-05T00:35:43.708] [ERROR] default - 41195245 - Invalid object name 'accounts'.
+[2023-05-05T00:35:43.708] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Function.findOne (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1228:12)
+    at async Object.exports.getUser (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:21:16)
+    at async Object.exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:7:16)
+    at async exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:39:21) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'accounts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'accounts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+    parameters: undefined
+  },
+  sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+  parameters: {}
+}
+[2023-05-05T00:44:22.456] [ERROR] default - 41195245 - Conversion failed when converting the nvarchar value 'DNI' to data type int.
+[2023-05-05T00:44:22.456] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Function.findOne (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1228:12)
+    at async Object.exports.getUser (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:21:16)
+    at async Object.exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:7:16)
+    at async exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:39:21) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Conversion failed when converting the nvarchar value 'DNI' to data type int.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 245,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+    parameters: undefined
+  },
+  original: RequestError: Conversion failed when converting the nvarchar value 'DNI' to data type int.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 245,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+    parameters: undefined
+  },
+  sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [account].[id] AS [account.id], [account].[userId] AS [account.userId], [account].[balance] AS [account.balance], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu] FROM [users] AS [user] LEFT OUTER JOIN [accounts] AS [account] ON [user].[id] = [account].[userId] WHERE [user].[docTypeId] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
+  parameters: {}
+}
+[2023-05-05T00:46:21.252] [ERROR] default - 41195245 - Usuario inexistente o clave incorrecta.
+[2023-05-05T00:51:42.215] [ERROR] default - 41195245 - Usuario inexistente o clave incorrecta.
+[2023-05-05T00:54:14.337] [ERROR] default - 41195245 - Usuario inexistente o clave incorrecta.
+[2023-05-05T00:54:52.992] [ERROR] default - 41195245 - Usuario inexistente o clave incorrecta.
+[2023-05-05T00:55:25.906] [ERROR] default - 41195245 - Usuario inexistente o clave incorrecta.
+[2023-05-05T00:55:28.480] [ERROR] default - 41195245 - Usuario inexistente o clave incorrecta.
+[2023-05-05T00:55:29.738] [ERROR] default - 41195245 - Usuario inexistente o clave incorrecta.
+[2023-05-05T00:55:57.555] [ERROR] default - 41195245 - secretOrPrivateKey must have a value
+[2023-05-05T00:55:57.555] [ERROR] default - Error: secretOrPrivateKey must have a value
+    at Object.module.exports [as sign] (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\jsonwebtoken\sign.js:107:20)
+    at exports.jwtSign (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\utils\jwt.util.js:4:14)
+    at Object.exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:20:19)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:39:21)
+[2023-05-05T00:57:42.138] [ERROR] default - 41195245 - secretOrPrivateKey must have a value
+[2023-05-05T00:57:42.138] [ERROR] default - Error: secretOrPrivateKey must have a value
+    at Object.module.exports [as sign] (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\jsonwebtoken\sign.js:107:20)
+    at exports.jwtSign (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\utils\jwt.util.js:4:14)
+    at Object.exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:20:19)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:39:21)
+[2023-05-05T00:57:44.797] [ERROR] default - 41195245 - secretOrPrivateKey must have a value
+[2023-05-05T00:57:44.797] [ERROR] default - Error: secretOrPrivateKey must have a value
+    at Object.module.exports [as sign] (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\jsonwebtoken\sign.js:107:20)
+    at exports.jwtSign (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\utils\jwt.util.js:4:14)
+    at Object.exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:20:19)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:39:21)
+[2023-05-05T00:59:09.515] [ERROR] default - 41195245 - secretOrPrivateKey must have a value
+[2023-05-05T00:59:09.515] [ERROR] default - Error: secretOrPrivateKey must have a value
+    at Object.module.exports [as sign] (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\jsonwebtoken\sign.js:107:20)
+    at exports.jwtSign (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\utils\jwt.util.js:4:14)
+    at Object.exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:20:19)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async exports.login (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:39:21)
+[2023-05-05T00:59:31.874] [ERROR] default - 41195245 - Cannot read property 'id' of null
+[2023-05-05T00:59:31.874] [ERROR] default - TypeError: Cannot read property 'id' of null
+    at Object.exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\movement.service.js:7:31)
+    at exports.history (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\movement.controller.js:54:43)
+    at Layer.handle [as handle_request] (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\express\lib\router\route.js:137:13)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\middlewares\auth\authorizator.js:17:9
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\jsonwebtoken\verify.js:223:12
+    at getSecret (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\jsonwebtoken\verify.js:94:10)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\middlewares\auth\authorizator.js:10:11
+    at Layer.handle [as handle_request] (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\express\lib\router\layer.js:95:5)
+[2023-05-05T00:59:32.038] [ERROR] default - 41195245 - Invalid object name 'contacts'.
+[2023-05-05T00:59:32.038] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Object.exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\contact.service.js:5:20)
+    at async exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\contact.controller.js:37:20) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'contacts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 1;',
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'contacts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 1;',
+    parameters: undefined
+  },
+  sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 1;',
+  parameters: {}
+}
+[2023-05-05T00:59:32.264] [ERROR] default - 41195245 - Cannot read property 'id' of null
+[2023-05-05T00:59:32.264] [ERROR] default - TypeError: Cannot read property 'id' of null
+    at Object.exports.getBalanceDebitLastMovements (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\movement.service.js:30:31)
+    at exports.get (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\account.controller.js:38:38)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[2023-05-05T01:04:48.827] [ERROR] default - 41195245 - Cannot read property 'code' of undefined
+[2023-05-05T01:04:48.828] [ERROR] default - TypeError: Cannot read property 'code' of undefined
+    at Object.exports.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:56:18)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async exports.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:71:16)
+[2023-05-05T01:05:35.134] [ERROR] default - 41195245 - Cannot read property 'code' of undefined
+[2023-05-05T01:05:35.134] [ERROR] default - TypeError: Cannot read property 'code' of undefined
+    at Object.exports.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:56:18)
+    at async exports.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:71:16)
+[2023-05-05T01:05:48.702] [ERROR] default - 41195245 - Cannot read property 'code' of undefined
+[2023-05-05T01:05:48.702] [ERROR] default - TypeError: Cannot read property 'code' of undefined
+    at Object.exports.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:56:18)
+    at async exports.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:71:16)
+[2023-05-05T01:06:15.849] [ERROR] default - 41195245 - Cannot read property 'dataValues' of null
+[2023-05-05T01:06:15.849] [ERROR] default - TypeError: Cannot read property 'dataValues' of null
+    at Object.exports.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:59:43)
+    at async exports.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:71:16)
+[2023-05-05T01:06:48.281] [ERROR] default - 41195245 - Cannot destructure property 'password' of '(intermediate value)' as it is undefined.
+[2023-05-05T01:06:48.282] [ERROR] default - TypeError: Cannot destructure property 'password' of '(intermediate value)' as it is undefined.
+    at Object.exports.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:59:11)
+    at async exports.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:71:16)
+[2023-05-05T01:07:33.887] [ERROR] default - 41195245 - Cannot destructure property 'password' of '(intermediate value)' as it is undefined.
+[2023-05-05T01:07:33.887] [ERROR] default - TypeError: Cannot destructure property 'password' of '(intermediate value)' as it is undefined.
+    at Object.exports.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\user.service.js:60:11)
+    at async exports.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\user.controller.js:71:16)
+[2023-05-05T01:10:49.356] [ERROR] default - 41195245 - Invalid object name 'contacts'.
+[2023-05-05T01:10:49.357] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Object.exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\contact.service.js:5:20)
+    at async exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\contact.controller.js:37:20) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'contacts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'contacts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+    parameters: undefined
+  },
+  sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+  parameters: {}
+}
+[2023-05-05T01:10:49.531] [ERROR] default - 41195245 - Invalid object name 'movements'.
+[2023-05-05T01:10:49.532] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Object.exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\movement.service.js:5:21)
+    at async exports.history (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\movement.controller.js:54:21) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'movements'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:10:49.175 +00:00';",
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'movements'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:10:49.175 +00:00';",
+    parameters: undefined
+  },
+  sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:10:49.175 +00:00';",
+  parameters: {}
+}
+[2023-05-05T01:10:49.863] [ERROR] default - 41195245 - Invalid object name 'movements'.
+[2023-05-05T01:10:49.863] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.rawSelect (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:434:18)
+    at async Function.aggregate (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1265:19)
+    at async Function.sum (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1320:12)
+    at async Object.exports.getBalanceDebitLastMovements (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\movement.service.js:28:17)
+    at async exports.get (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\account.controller.js:38:16) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'movements'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT sum([amount]) AS [sum] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:10:49.691 +00:00' AND [movement].[amount] < 0;",
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'movements'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT sum([amount]) AS [sum] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:10:49.691 +00:00' AND [movement].[amount] < 0;",
+    parameters: undefined
+  },
+  sql: "SELECT sum([amount]) AS [sum] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:10:49.691 +00:00' AND [movement].[amount] < 0;",
+  parameters: {}
+}
+[2023-05-05T01:11:42.176] [ERROR] default - undefined - Unexpected token d in JSON at position 3
+[2023-05-05T01:11:56.087] [ERROR] default - 41195245 - Invalid object name 'contacts'.
+[2023-05-05T01:11:56.087] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Object.exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\contact.service.js:5:20)
+    at async exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\contact.controller.js:37:20) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'contacts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'contacts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+    parameters: undefined
+  },
+  sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+  parameters: {}
+}
+[2023-05-05T01:11:56.263] [ERROR] default - 41195245 - Invalid object name 'movements'.
+[2023-05-05T01:11:56.263] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Object.exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\movement.service.js:5:21)
+    at async exports.history (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\movement.controller.js:54:21) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'movements'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:11:55.917 +00:00';",
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'movements'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:11:55.917 +00:00';",
+    parameters: undefined
+  },
+  sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:11:55.917 +00:00';",
+  parameters: {}
+}
+[2023-05-05T01:11:56.598] [ERROR] default - 41195245 - Invalid object name 'movements'.
+[2023-05-05T01:11:56.598] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.rawSelect (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:434:18)
+    at async Function.aggregate (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1265:19)
+    at async Function.sum (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1320:12)
+    at async Object.exports.getBalanceDebitLastMovements (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\movement.service.js:28:17)
+    at async exports.get (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\account.controller.js:38:16) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'movements'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT sum([amount]) AS [sum] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:11:56.424 +00:00' AND [movement].[amount] < 0;",
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'movements'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT sum([amount]) AS [sum] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:11:56.424 +00:00' AND [movement].[amount] < 0;",
+    parameters: undefined
+  },
+  sql: "SELECT sum([amount]) AS [sum] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:11:56.424 +00:00' AND [movement].[amount] < 0;",
+  parameters: {}
+}
+[2023-05-05T01:12:03.364] [ERROR] default - undefined - Unexpected token d in JSON at position 3
+[2023-05-05T01:12:32.435] [ERROR] default - undefined - Unexpected token d in JSON at position 3
+[2023-05-05T01:12:33.279] [ERROR] default - undefined - Unexpected token d in JSON at position 3
+[2023-05-05T01:12:45.463] [ERROR] default - undefined - Unexpected token d in JSON at position 3
+[2023-05-05T01:13:06.194] [ERROR] default - 41195245 - Not Found
+[2023-05-05T01:13:07.339] [ERROR] default - 41195245 - Not Found
+[2023-05-05T01:13:38.782] [ERROR] default - 41195245 - Not Found
+[2023-05-05T01:14:41.977] [ERROR] default - 41195245 - Invalid object name 'contacts'.
+[2023-05-05T01:14:41.977] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Object.exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\contact.service.js:5:20)
+    at async exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\contact.controller.js:37:20) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'contacts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'contacts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+    parameters: undefined
+  },
+  sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+  parameters: {}
+}
+[2023-05-05T01:15:46.815] [ERROR] default - 41195245 - Invalid object name 'contacts'.
+[2023-05-05T01:15:46.816] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Object.exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\contact.service.js:9:20)
+    at async exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\contact.controller.js:37:20) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'contacts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'contacts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+    parameters: undefined
+  },
+  sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+  parameters: {}
+}
+[2023-05-05T01:16:02.394] [ERROR] default - 41195245 - Invalid object name 'contacts'.
+[2023-05-05T01:16:02.395] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Object.exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\contact.service.js:9:20)
+    at async exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\contact.controller.js:37:20) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'contacts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'contacts'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+    parameters: undefined
+  },
+  sql: 'SELECT [contact].[id], [contact].[accountId], [contact].[observation], [account].[id] AS [account.id], [account].[alias] AS [account.alias], [account].[cbu] AS [account.cbu], [account->user].[id] AS [account.user.id], [account->user].[docTypeId] AS [account.user.docTypeId], [account->user].[docNumber] AS [account.user.docNumber], [account->user].[name] AS [account.user.name] FROM [contacts] AS [contact] LEFT OUTER JOIN [accounts] AS [account] ON [contact].[accountId] = [account].[id] LEFT OUTER JOIN [users] AS [account->user] ON [account].[userId] = [account->user].[id] WHERE [contact].[userId] = 5;',
+  parameters: {}
+}
+[2023-05-05T01:19:20.654] [ERROR] default - 41195245 - Invalid object name 'movements'.
+[2023-05-05T01:19:20.654] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Object.exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\movement.service.js:5:21)
+    at async exports.history (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\movement.controller.js:54:21) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'movements'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:19:19.447 +00:00';",
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'movements'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:19:19.447 +00:00';",
+    parameters: undefined
+  },
+  sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:19:19.447 +00:00';",
+  parameters: {}
+}
+[2023-05-05T01:19:28.216] [ERROR] default - 41195245 - Invalid object name 'movements'.
+[2023-05-05T01:19:28.216] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Object.exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\movement.service.js:5:21)
+    at async exports.history (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\movement.controller.js:54:21) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'movements'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:19:28.043 +00:00';",
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'movements'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:19:28.043 +00:00';",
+    parameters: undefined
+  },
+  sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:19:28.043 +00:00';",
+  parameters: {}
+}
+[2023-05-05T01:20:23.595] [ERROR] default - 41195245 - Invalid object name 'movements'.
+[2023-05-05T01:20:23.595] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Object.exports.getList (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\movement.service.js:9:21)
+    at async exports.history (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\movement.controller.js:54:21) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Invalid object name 'movements'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:20:23.405 +00:00';",
+    parameters: undefined
+  },
+  original: RequestError: Invalid object name 'movements'.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 208,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:20:23.405 +00:00';",
+    parameters: undefined
+  },
+  sql: "SELECT [id], [accountId], [amount], [movementTypeId], [billNumber], [creationDate], [description], [usernameDebit], [usernameCredit] FROM [movements] AS [movement] WHERE [movement].[accountId] = 4 AND [movement].[creationDate] > N'2023-04-05 04:20:23.405 +00:00';",
+  parameters: {}
+}
+[2023-05-05T01:32:21.419] [ERROR] default - 41195245 - Cannot read property 'id' of null
+[2023-05-05T01:32:21.420] [ERROR] default - TypeError: Cannot read property 'id' of null
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:29:40
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:506:18
+    at async Object.exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:21:20)
+    at async exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\account.controller.js:131:19)
+[2023-05-05T01:47:19.288] [ERROR] default - 41195245 - notNull Violation: contact.accountId cannot be null
+[2023-05-05T01:47:19.288] [ERROR] default - ValidationError [SequelizeValidationError]: notNull Violation: contact.accountId cannot be null
+    at InstanceValidator._validate (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\instance-validator.js:50:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\instance-validator.js:60:7)
+    at async InstanceValidator.validate (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\instance-validator.js:54:12)
+    at async model.save (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:2368:7)
+    at async Function.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1344:12)
+    at async Object.exports.add (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\contact.service.js:22:21)
+    at async exports.add (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\contact.controller.js:79:19) {
+  errors: [
+    ValidationErrorItem {
+      message: 'contact.accountId cannot be null',
+      type: 'notNull Violation',
+      path: 'accountId',
+      value: null,
+      origin: 'CORE',
+      instance: [contact],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ]
+}
+[2023-05-05T01:58:03.201] [ERROR] default - 41195245 - Op is not defined
+[2023-05-05T01:58:03.201] [ERROR] default - ReferenceError: Op is not defined
+    at Object.exports.add (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\contact.service.js:27:10)
+    at exports.add (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\contact.controller.js:79:40)
+    at Layer.handle [as handle_request] (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\express\lib\router\route.js:137:13)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\middlewares\auth\authorizator.js:17:9
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\jsonwebtoken\verify.js:223:12
+    at getSecret (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\jsonwebtoken\verify.js:94:10)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\middlewares\auth\authorizator.js:10:11
+    at Layer.handle [as handle_request] (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\express\lib\router\layer.js:95:5)
+[2023-05-05T02:00:22.061] [ERROR] default - 41195245 - Cannot read property 'id' of null
+[2023-05-05T02:00:22.062] [ERROR] default - TypeError: Cannot read property 'id' of null
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:29:40
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:506:18
+    at async Object.exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:21:20)
+    at async exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\account.controller.js:131:19)
+[2023-05-05T02:00:56.039] [ERROR] default - 41195245 - Cannot read property 'id' of null
+[2023-05-05T02:00:56.039] [ERROR] default - TypeError: Cannot read property 'id' of null
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:29:40
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:506:18
+    at async Object.exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:21:20)
+    at async exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\account.controller.js:131:19)
+[2023-05-05T02:01:10.402] [ERROR] default - 41195245 - Cannot read property 'id' of null
+[2023-05-05T02:01:10.402] [ERROR] default - TypeError: Cannot read property 'id' of null
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:29:40
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:506:18
+    at async Object.exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:21:20)
+    at async exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\account.controller.js:131:19)
+[2023-05-05T02:04:17.372] [ERROR] default - 41195245 - Cannot read property 'id' of null
+[2023-05-05T02:04:17.372] [ERROR] default - TypeError: Cannot read property 'id' of null
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:34:40
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:506:18
+    at async Object.exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:26:20)
+    at async exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\account.controller.js:131:19)
+[2023-05-05T02:09:18.573] [ERROR] default - 41195245 - notNull Violation: movement.description cannot be null
+[2023-05-05T02:09:18.573] [ERROR] default - ValidationError [SequelizeValidationError]: notNull Violation: movement.description cannot be null
+    at InstanceValidator._validate (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\instance-validator.js:50:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async InstanceValidator._validateAndRunHooks (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\instance-validator.js:60:7)
+    at async InstanceValidator.validate (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\instance-validator.js:54:12)
+    at async model.save (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:2368:7)
+    at async Function.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1344:12)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:30:24
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:506:18
+    at async Object.exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:26:20)
+    at async exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\account.controller.js:131:19) {
+  errors: [
+    ValidationErrorItem {
+      message: 'movement.description cannot be null',
+      type: 'notNull Violation',
+      path: 'description',
+      value: null,
+      origin: 'CORE',
+      instance: [movement],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ]
+}
+[2023-05-05T02:11:58.834] [ERROR] default - 41195245 - Timeout: Request failed to complete in 15000ms
+[2023-05-05T02:11:58.834] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Function.findOne (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1228:12)
+    at async Function.findByPk (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1215:12)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:41:23
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:506:18
+    at async Object.exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:26:20) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Timeout: Request failed to complete in 15000ms
+      at Connection.requestTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1279:21)
+      at Timeout._onTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1231:14)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7) {
+    code: 'ETIMEOUT',
+    number: undefined,
+    state: undefined,
+    class: undefined,
+    serverName: undefined,
+    procName: undefined,
+    lineNumber: undefined,
+    sql: 'SELECT [id], [userId], [balance], [alias], [cbu] FROM [accounts] AS [account] WHERE [account].[id] = 4;',
+    parameters: undefined
+  },
+  original: RequestError: Timeout: Request failed to complete in 15000ms
+      at Connection.requestTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1279:21)
+      at Timeout._onTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1231:14)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7) {
+    code: 'ETIMEOUT',
+    number: undefined,
+    state: undefined,
+    class: undefined,
+    serverName: undefined,
+    procName: undefined,
+    lineNumber: undefined,
+    sql: 'SELECT [id], [userId], [balance], [alias], [cbu] FROM [accounts] AS [account] WHERE [account].[id] = 4;',
+    parameters: undefined
+  },
+  sql: 'SELECT [id], [userId], [balance], [alias], [cbu] FROM [accounts] AS [account] WHERE [account].[id] = 4;',
+  parameters: {}
+}
+[2023-05-05T02:13:45.632] [ERROR] default - 41195245 - Timeout: Request failed to complete in 15000ms
+[2023-05-05T02:13:45.633] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Function.findOne (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1228:12)
+    at async Function.findByPk (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1215:12)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:41:23
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:506:18
+    at async Object.exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:26:20) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Timeout: Request failed to complete in 15000ms
+      at Connection.requestTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1279:21)
+      at Timeout._onTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1231:14)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7) {
+    code: 'ETIMEOUT',
+    number: undefined,
+    state: undefined,
+    class: undefined,
+    serverName: undefined,
+    procName: undefined,
+    lineNumber: undefined,
+    sql: 'SELECT [id], [userId], [balance], [alias], [cbu] FROM [accounts] AS [account] WHERE [account].[id] = 4;',
+    parameters: undefined
+  },
+  original: RequestError: Timeout: Request failed to complete in 15000ms
+      at Connection.requestTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1279:21)
+      at Timeout._onTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1231:14)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7) {
+    code: 'ETIMEOUT',
+    number: undefined,
+    state: undefined,
+    class: undefined,
+    serverName: undefined,
+    procName: undefined,
+    lineNumber: undefined,
+    sql: 'SELECT [id], [userId], [balance], [alias], [cbu] FROM [accounts] AS [account] WHERE [account].[id] = 4;',
+    parameters: undefined
+  },
+  sql: 'SELECT [id], [userId], [balance], [alias], [cbu] FROM [accounts] AS [account] WHERE [account].[id] = 4;',
+  parameters: {}
+}
+[2023-05-05T02:18:07.566] [ERROR] default - 41195245 - Timeout: Request failed to complete in 15000ms
+[2023-05-05T02:18:07.567] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Function.findOne (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1228:12)
+    at async Function.findByPk (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1215:12)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:41:23
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:506:18
+    at async Object.exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:26:20) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Timeout: Request failed to complete in 15000ms
+      at Connection.requestTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1279:21)
+      at Timeout._onTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1231:14)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7) {
+    code: 'ETIMEOUT',
+    number: undefined,
+    state: undefined,
+    class: undefined,
+    serverName: undefined,
+    procName: undefined,
+    lineNumber: undefined,
+    sql: 'SELECT [id], [userId], [balance], [alias], [cbu] FROM [accounts] AS [account] WHERE [account].[id] = 4;',
+    parameters: undefined
+  },
+  original: RequestError: Timeout: Request failed to complete in 15000ms
+      at Connection.requestTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1279:21)
+      at Timeout._onTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1231:14)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7) {
+    code: 'ETIMEOUT',
+    number: undefined,
+    state: undefined,
+    class: undefined,
+    serverName: undefined,
+    procName: undefined,
+    lineNumber: undefined,
+    sql: 'SELECT [id], [userId], [balance], [alias], [cbu] FROM [accounts] AS [account] WHERE [account].[id] = 4;',
+    parameters: undefined
+  },
+  sql: 'SELECT [id], [userId], [balance], [alias], [cbu] FROM [accounts] AS [account] WHERE [account].[id] = 4;',
+  parameters: {}
+}
+[2023-05-05T02:19:45.953] [ERROR] default - 41195245 - Timeout: Request failed to complete in 15000ms
+[2023-05-05T02:19:45.953] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Function.findOne (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1228:12)
+    at async Function.findByPk (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1215:12)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:41:23
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:506:18
+    at async Object.exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:26:20) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Timeout: Request failed to complete in 15000ms
+      at Connection.requestTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1279:21)
+      at Timeout._onTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1231:14)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7) {
+    code: 'ETIMEOUT',
+    number: undefined,
+    state: undefined,
+    class: undefined,
+    serverName: undefined,
+    procName: undefined,
+    lineNumber: undefined,
+    sql: 'SELECT [id], [userId], [balance], [alias], [cbu] FROM [accounts] AS [account] WHERE [account].[id] = 4;',
+    parameters: undefined
+  },
+  original: RequestError: Timeout: Request failed to complete in 15000ms
+      at Connection.requestTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1279:21)
+      at Timeout._onTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1231:14)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7) {
+    code: 'ETIMEOUT',
+    number: undefined,
+    state: undefined,
+    class: undefined,
+    serverName: undefined,
+    procName: undefined,
+    lineNumber: undefined,
+    sql: 'SELECT [id], [userId], [balance], [alias], [cbu] FROM [accounts] AS [account] WHERE [account].[id] = 4;',
+    parameters: undefined
+  },
+  sql: 'SELECT [id], [userId], [balance], [alias], [cbu] FROM [accounts] AS [account] WHERE [account].[id] = 4;',
+  parameters: {}
+}
+[2023-05-05T02:22:21.023] [ERROR] default - 41195245 - Timeout: Request failed to complete in 15000ms
+[2023-05-05T02:22:21.024] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.insert (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:2432:35)
+    at async Function.create (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1344:12)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:30:24
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:506:18
+    at async Object.exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:26:20)
+    at async exports.recharge (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\controllers\account.controller.js:131:19) {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Timeout: Request failed to complete in 15000ms
+      at Connection.requestTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1279:21)
+      at Timeout._onTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1231:14)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7) {
+    code: 'ETIMEOUT',
+    number: undefined,
+    state: undefined,
+    class: undefined,
+    serverName: undefined,
+    procName: undefined,
+    lineNumber: undefined,
+    sql: 'INSERT INTO [movements] ([accountId],[amount],[movementTypeId],[creationDate],[description],[usernameCredit]) OUTPUT INSERTED.[id],INSERTED.[accountId],INSERTED.[amount],INSERTED.[movementTypeId],INSERTED.[billNumber],INSERTED.[creationDate],INSERTED.[description],INSERTED.[usernameDebit],INSERTED.[usernameCredit] VALUES (@0,@1,@2,@3,@4,@5);',
+    parameters: {
+      '0': 4,
+      '1': 500,
+      '2': 'RECHARGE',
+      '3': '2023-05-05 05:22:05.682 +00:00',
+      '4': 'Recargar',
+      '5': 'wborsoi'
+    }
+  },
+  original: RequestError: Timeout: Request failed to complete in 15000ms
+      at Connection.requestTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1279:21)
+      at Timeout._onTimeout (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\connection.js:1231:14)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7) {
+    code: 'ETIMEOUT',
+    number: undefined,
+    state: undefined,
+    class: undefined,
+    serverName: undefined,
+    procName: undefined,
+    lineNumber: undefined,
+    sql: 'INSERT INTO [movements] ([accountId],[amount],[movementTypeId],[creationDate],[description],[usernameCredit]) OUTPUT INSERTED.[id],INSERTED.[accountId],INSERTED.[amount],INSERTED.[movementTypeId],INSERTED.[billNumber],INSERTED.[creationDate],INSERTED.[description],INSERTED.[usernameDebit],INSERTED.[usernameCredit] VALUES (@0,@1,@2,@3,@4,@5);',
+    parameters: {
+      '0': 4,
+      '1': 500,
+      '2': 'RECHARGE',
+      '3': '2023-05-05 05:22:05.682 +00:00',
+      '4': 'Recargar',
+      '5': 'wborsoi'
+    }
+  },
+  sql: 'INSERT INTO [movements] ([accountId],[amount],[movementTypeId],[creationDate],[description],[usernameCredit]) OUTPUT INSERTED.[id],INSERTED.[accountId],INSERTED.[amount],INSERTED.[movementTypeId],INSERTED.[billNumber],INSERTED.[creationDate],INSERTED.[description],INSERTED.[usernameDebit],INSERTED.[usernameCredit] VALUES (@0,@1,@2,@3,@4,@5);',
+  parameters: {
+    '0': 4,
+    '1': 500,
+    '2': 'RECHARGE',
+    '3': '2023-05-05 05:22:05.682 +00:00',
+    '4': 'Recargar',
+    '5': 'wborsoi'
+  }
+}
+[2023-05-05T02:23:23.222] [ERROR] default - 41195245 - Conversion failed when converting the varchar value 'DNI' to data type int.
+[2023-05-05T02:23:23.223] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Function.findOne (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1228:12)
+    at async Object.exports.getUserAccount (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:55:17)
+    at async getAccount (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\transfer.service.js:81:17)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\transfer.service.js:19:27
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:506:18 {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Conversion failed when converting the varchar value 'DNI' to data type int.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 245,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [account].[id], [account].[userId], [account].[balance], [account].[alias], [account].[cbu], [user].[id] AS [user.id], [user].[docTypeId] AS [user.docTypeId], [user].[docNumber] AS [user.docNumber], [user].[password] AS [user.password], [user].[name] AS [user.name], [user->docType].[id] AS [user.docType.id], [user->docType].[description] AS [user.docType.description] FROM [accounts] AS [account] INNER JOIN [users] AS [user] ON [account].[userId] = [user].[id] AND [user].[docTypeId] = 1 AND [user].[docNumber] = 5 LEFT OUTER JOIN [doc_types] AS [user->docType] ON [user].[docTypeId] = [user->docType].[id] ORDER BY [account].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;',
+    parameters: undefined
+  },
+  original: RequestError: Conversion failed when converting the varchar value 'DNI' to data type int.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 245,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [account].[id], [account].[userId], [account].[balance], [account].[alias], [account].[cbu], [user].[id] AS [user.id], [user].[docTypeId] AS [user.docTypeId], [user].[docNumber] AS [user.docNumber], [user].[password] AS [user.password], [user].[name] AS [user.name], [user->docType].[id] AS [user.docType.id], [user->docType].[description] AS [user.docType.description] FROM [accounts] AS [account] INNER JOIN [users] AS [user] ON [account].[userId] = [user].[id] AND [user].[docTypeId] = 1 AND [user].[docNumber] = 5 LEFT OUTER JOIN [doc_types] AS [user->docType] ON [user].[docTypeId] = [user->docType].[id] ORDER BY [account].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;',
+    parameters: undefined
+  },
+  sql: 'SELECT [account].[id], [account].[userId], [account].[balance], [account].[alias], [account].[cbu], [user].[id] AS [user.id], [user].[docTypeId] AS [user.docTypeId], [user].[docNumber] AS [user.docNumber], [user].[password] AS [user.password], [user].[name] AS [user.name], [user->docType].[id] AS [user.docType.id], [user->docType].[description] AS [user.docType.description] FROM [accounts] AS [account] INNER JOIN [users] AS [user] ON [account].[userId] = [user].[id] AND [user].[docTypeId] = 1 AND [user].[docNumber] = 5 LEFT OUTER JOIN [doc_types] AS [user->docType] ON [user].[docTypeId] = [user->docType].[id] ORDER BY [account].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;',
+  parameters: {}
+}
+[2023-05-05T02:25:29.286] [ERROR] default - 41195245 - Conversion failed when converting the varchar value 'DNI' to data type int.
+[2023-05-05T02:25:29.286] [ERROR] default - Error
+    at Query.run (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\mssql\query.js:99:25)
+    at C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MSSqlQueryInterface.select (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async Function.findAll (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1134:21)
+    at async Function.findOne (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\model.js:1228:12)
+    at async Object.exports.getUserAccount (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\account.service.js:55:17)
+    at async getAccount (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\transfer.service.js:81:17)
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\services\transfer.service.js:19:27
+    at async C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\sequelize\lib\sequelize.js:506:18 {
+  name: 'SequelizeDatabaseError',
+  parent: RequestError: Conversion failed when converting the varchar value 'DNI' to data type int.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 245,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [account].[id], [account].[userId], [account].[balance], [account].[alias], [account].[cbu], [user].[id] AS [user.id], [user].[docTypeId] AS [user.docTypeId], [user].[docNumber] AS [user.docNumber], [user].[password] AS [user.password], [user].[name] AS [user.name], [user->docType].[id] AS [user.docType.id], [user->docType].[description] AS [user.docType.description] FROM [accounts] AS [account] INNER JOIN [users] AS [user] ON [account].[userId] = [user].[id] AND [user].[docTypeId] = 1 AND [user].[docNumber] = 5 LEFT OUTER JOIN [doc_types] AS [user->docType] ON [user].[docTypeId] = [user->docType].[id] ORDER BY [account].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;',
+    parameters: undefined
+  },
+  original: RequestError: Conversion failed when converting the varchar value 'DNI' to data type int.
+      at RequestTokenHandler.onErrorMessage (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\handler.js:368:21)
+      at Readable.<anonymous> (C:\Users\Wally\Desktop\UADE\2023\1er Cuatrimestre\4 - ARQUITECTURA DE APLICACIONES\TPI\Demo\arquitectura-BE\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:375:28)
+      at addChunk (internal/streams/readable.js:290:12)
+      at readableAddChunk (internal/streams/readable.js:265:9)
+      at Readable.push (internal/streams/readable.js:204:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+    code: 'EREQUEST',
+    number: 245,
+    state: 1,
+    class: 16,
+    serverName: 'EC2AMAZ-IN3J24U',
+    procName: '',
+    lineNumber: 1,
+    sql: 'SELECT [account].[id], [account].[userId], [account].[balance], [account].[alias], [account].[cbu], [user].[id] AS [user.id], [user].[docTypeId] AS [user.docTypeId], [user].[docNumber] AS [user.docNumber], [user].[password] AS [user.password], [user].[name] AS [user.name], [user->docType].[id] AS [user.docType.id], [user->docType].[description] AS [user.docType.description] FROM [accounts] AS [account] INNER JOIN [users] AS [user] ON [account].[userId] = [user].[id] AND [user].[docTypeId] = 1 AND [user].[docNumber] = 5 LEFT OUTER JOIN [doc_types] AS [user->docType] ON [user].[docTypeId] = [user->docType].[id] ORDER BY [account].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;',
+    parameters: undefined
+  },
+  sql: 'SELECT [account].[id], [account].[userId], [account].[balance], [account].[alias], [account].[cbu], [user].[id] AS [user.id], [user].[docTypeId] AS [user.docTypeId], [user].[docNumber] AS [user.docNumber], [user].[password] AS [user.password], [user].[name] AS [user.name], [user->docType].[id] AS [user.docType.id], [user->docType].[description] AS [user.docType.description] FROM [accounts] AS [account] INNER JOIN [users] AS [user] ON [account].[userId] = [user].[id] AND [user].[docTypeId] = 1 AND [user].[docNumber] = 5 LEFT OUTER JOIN [doc_types] AS [user->docType] ON [user].[docTypeId] = [user->docType].[id] ORDER BY [account].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;',
+  parameters: {}
+}

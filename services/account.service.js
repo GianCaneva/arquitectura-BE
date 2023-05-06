@@ -17,20 +17,25 @@ exports.find = async function (params) {
 };
 
 exports.recharge = async function (user, req) {
+  console.log("\n\n-------------------------------------\n\n");
+  console.log("Parametros que llegaron:\n");
+  console.log("user:", user);
+  console.log("\nreq:", req);
+  console.log("\n\n-------------------------------------\n\n");
   try {
     const result = await sequelize.transaction(async (t) => {
-      this.updateBalance(req.amount, user.account.id, t);
+      this.updateBalance(req.amount, user.account.id);
       let movementType = await MovementTypeService.get(MovementTypeService.types.RECHARGE);
 
       let movementDb = await MovementService.insert(
         {
-          accountId: user.account.id,
-          amount: req.amount,
-          movementTypeId: movementType.id,
-          description: movementType.descriptionCredit,
-          usernameCredit: user.name,
+          accountId: user?.account?.id,
+          amount: req?.amount,
+          movementTypeId: movementType?.id,
+          description: movementType?.descriptionCredit,
+          usernameCredit: user?.name,
         },
-        t
+        
       );
 
       let accountDb = await models.account.findByPk(user.account.id);

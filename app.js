@@ -44,6 +44,7 @@ log4js.configure({
 app.use(
   cors({
     origin: [
+      "http://localhost:3100",
       "http://localhost:3000",
       "http://pay.deliver.ar:3000",
       "http://pay.deliver.ar:4000",

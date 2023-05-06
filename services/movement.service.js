@@ -2,6 +2,10 @@ const { Op } = require("sequelize");
 const { models } = require("../db");
 
 exports.getList = async function (user, days) {
+  // console.log("\n\n--------------------------------\n\n")
+  // console.log("models.account - Nombre: ", models.movementType.getTableName(),"\nAtributos:\n\n", models.movementType.getAttributes());
+  // console.log("\n\n--------------------------------\n\n")
+
   let movementsDb = await models.movement.findAll({
     where: {
       accountId: user.account.id,

@@ -15,6 +15,10 @@ exports.login = async function (user) {
 };
 
 exports.getUser = async function (user) {
+  // console.log("\n\n--------------------------------\n\n")
+  // console.log("models.account - Nombre: ", models.account.getTableName(),"\nAtributos:\n\n", models.account.getAttributes());
+  // console.log("\n\n--------------------------------\n\n")
+
   let userDb = await models.user.findOne({
     include: [
       {
@@ -43,10 +47,11 @@ exports.create = async function (user) {
       cbu: String(userDb.id).padStart(22, '0')
     });
   } catch (e) {
-    if (e.parent.code == "ER_DUP_ENTRY") throw new BusinessError("Usuario existente.");
+    if (e?.parent?.code == "ER_DUP_ENTRY") throw new BusinessError("Usuario existente.");
+    throw e;
   }
 
-  const { password, ...details } = userDb.dataValues;
+  const { password, ...details } = userDb?.dataValues;
 
   return details;
 };
