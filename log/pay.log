@@ -386,3 +386,6 @@
   sql: "SELECT [user].[id], [user].[docTypeId], [user].[docNumber], [user].[password], [user].[name], [docType].[id] AS [docType.id], [docType].[description] AS [docType.description] FROM [users] AS [user] LEFT OUTER JOIN [doc_types] AS [docType] ON [user].[docTypeId] = [docType].[id] WHERE [user].[description] = N'DNI' AND [user].[docNumber] = N'41195245' ORDER BY [user].[id] OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY;",
   parameters: {}
 }
+[2023-05-10T02:03:24.227] [ERROR] default - 41195245 - Usuario o cuenta inexistente. - docTypeId: 1, docNumber: 5.
+[2023-05-10T02:09:26.442] [ERROR] default - 41195245 - Usuario o cuenta inexistente. - docTypeId: 1, docNumber: 5.
+[2023-05-10T02:11:53.016] [ERROR] default - 41195245 - Usuario o cuenta inexistente. - docTypeId: 1, docNumber: 5.
