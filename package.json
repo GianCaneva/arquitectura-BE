@@ -7,6 +7,7 @@
     "swagger-autogen": "node swagger.js"
   },
   "dependencies": {
+    "@kafkajs/confluent-schema-registry": "^3.3.0",
     "and": "^0.0.3",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
@@ -17,6 +18,7 @@
     "express-session": "^1.17.3",
     "http-errors": "^2.0.0",
     "jsonwebtoken": "^8.5.1",
+    "kafkajs": "^2.2.4",
     "log4js": "^6.7.0",
     "morgan": "~1.9.1",
     "mssql": "^9.1.1",

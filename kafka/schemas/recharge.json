@@ -1,0 +1,18 @@
+{
+    "doc": "Sample schema to help you get started.",
+    "fields": [
+      {
+        "doc": "The double type is a double precision (64-bit) IEEE 754 floating-point number.",
+        "name": "amount",
+        "type": "double"
+      },
+      {
+        "doc": "The string is a unicode character sequence.",
+        "name": "token",
+        "type": "string"
+      }
+    ],
+    "name": "sampleRecord",
+    "namespace": "com.mycorp.mynamespace",
+    "type": "record"
+  }

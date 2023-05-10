@@ -19,14 +19,13 @@ exports.getUser = async function (user) {
   // console.log("models.account - Nombre: ", models.account.getTableName(),"\nAtributos:\n\n", models.account.getAttributes());
   // console.log("\n\n--------------------------------\n\n")
 
+  console.log("User", user)
   let userDb = await models.user.findOne({
     include: [
-      {
-        model: models.account,
-      },
+      {model: models.account},
+      {model: models.docType , where: {description: user.docTypeId}}
     ],
     where: {
-      docTypeId: user.docTypeId,
       docNumber: user.docNumber,
     },
   });

@@ -2,6 +2,7 @@ const AccountService = require("../services/account.service");
 const MovementService = require("../services/movement.service");
 const BusinessError = require("../errors/business_error");
 const { getReqUser } = require("../utils/session.util");
+const { writeUserDataToKafka } = require("../kafka/schemas/recharge");
 
 exports.get = async function (req, res, next) {
   /* #swagger.responses[200] = {
@@ -128,6 +129,7 @@ exports.recharge = async function (req, res, next) {
         "apiKeyAuth": []
     }] */
   try {
+    await writeUserDataToKafka({ amount: req.body.amount, token: req.cookies["token"] }, req.cookies["token"])
     let account = await AccountService.recharge(getReqUser(req), req.body);
     return res.status(200).json(account);
   } catch (e) {

@@ -21,6 +21,7 @@ const swaggerFile = require('./swagger_output.json');
 
 const { handleError } = require("./middlewares/error");
 const { getReqUser } = require("./utils/session.util");
+const { readMessages } = require("./kafka/schemas/recharge");
 require("./queues/queue");
 
 var app = express();
@@ -93,5 +94,7 @@ app.all('*', function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
+readMessages();
 
 module.exports = app;
